@@ -1,0 +1,26 @@
+﻿<div id="topnav" class="navbar navbar-default navbar-fixed-top">
+	<div class="navbar-header">
+		<h1 class="navbar-brand">
+			<a id="topnav-homelink" href="@Url.Action("Index", "Home")">
+				<img src="@Url.Content("~/Content/Images/logo.png")" alt="Logo" />
+				Tennis Market Plus
+			</a>
+		</h1>
+	</div>
+	<ul class="nav navbar-nav navbar-right">
+		<li><a href="tel://888.555.1000">888.555.1000</a></li>
+		<li class="dropdown">
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+				Change Theme
+				<span class="caret"></span>
+			</a>
+			<ul class="dropdown-menu">
+				<li><a href="?theme=basic">Basic</a></li>
+				<li><a href="?theme=alt">Alternate</a></li>
+				<li><a href="?theme=bold">Bold</a></li>
+			</ul>
+		</li>
+	</ul>
+	<p>Your one-stop shop for all things Tennis</p>
+</div>
+

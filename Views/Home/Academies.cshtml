@@ -1,0 +1,197 @@
+﻿
+@{
+	ViewBag.Title = "Academies";
+	ViewBag.ActiveMenu = "Academies";
+}
+
+@section sidebar{
+	<div>
+		<h3>Search by Location</h3>
+		<form>
+			<div class="input-group">
+				<input type="text" class="form-control" placeholder="City, State - OR - Zip Code">
+				<span class="input-group-btn">
+					<button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+				</span>
+			</div>
+		</form>
+	</div>
+	<div>
+		<h3>Filter Results</h3>
+		<form autocomplete="off">
+			<div class="form-group">
+				<div class="btn-group btn-group-lg" role="group" aria-label="Camps or Classes">
+					<button type="button" class="btn btn-default active">Camps</button>
+					<button type="button" class="btn btn-default">Classes</button>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="checkbox">
+					<label>
+						<input type="checkbox" />
+						Some Option
+					</label>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="checkbox">
+					<label>
+						<input type="checkbox" />
+						Some Other Option
+					</label>
+				</div>
+			</div>
+			<div class="form-group">
+				<button class="btn btn-default" type="submit">Filter Results <span class="glyphicon glyphicon-filter"></span></button>
+			</div>
+		</form>
+	</div>
+}
+
+<div id="academy-list-page row">
+
+	<div class="col-lg-12">
+		<div class="page-header text-center">
+			<h2>All Academies</h2>
+		</div>
+
+		<div id="academy-list">
+
+			<div class="academy-list-item">
+				<div class="row">
+					<div class="col-md-4 pull-right">
+						<div class="academy-sidebar text-right">
+							<div class="academy-featured">
+								<span class="glyphicon glyphicon-tag"></span>
+								Featured
+							</div>
+							<div class="academy-check text-success">
+								<span class="glyphicon glyphicon-check"></span>
+								Summer Programs
+							</div>
+							<div class="academy-check text-success">
+								<span class="glyphicon glyphicon-check"></span>
+								Some Other Option Available
+							</div>
+							<div class="academy-actions">
+								<a class="btn btn-lg btn-primary" href="@Url.Action("Detail", "Home")">Show Me More</a>
+							</div>
+						</div>
+
+					</div>
+					<div class="col-md-1">
+						<img class="academy-logo" src="~/Content/Images/logo-protennis.png" />
+					</div>
+					<div class="col-md-7">
+						<h3 class="academy-title">Pro Tennis Academy</h3>
+						<div class="academy-short-description">
+							<p>
+								Our mission at Pro Tennis Academy is to provide a world class standard of coaching and programming instruction for our students to reach their highest potential.
+								We utilize the most up to date industry techniques in an exceptional training environment.
+								Each member of our Pro Tennis Coaching Staff has an outstanding resume with international experience.
+								Located at GT Bray Park in beautiful Bradenton Florida, Pro Tennis Academy training facilities offers instruction for all ages,
+								experience levels and long term student objectives.
+							</p>  
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="academy-list-item">
+				<div class="row">
+					<div class="col-md-4 pull-right">
+						<div class="academy-sidebar text-right">
+							<div class="academy-check text-success">
+								<span class="glyphicon glyphicon-check"></span>
+								Some Other Option Available
+							</div>
+							<div class="academy-actions">
+								<a class="btn btn-lg btn-primary" href="@Url.Action("Detail", "Home")">Show Me More</a>
+							</div>
+						</div>
+
+					</div>
+					<div class="col-md-1">
+						<img class="academy-logo" src="~/Content/Images/tennis-logo-1.png" />
+					</div>
+					<div class="col-md-7">
+						<h3 class="academy-title">Tennis Academy 1</h3>
+						<div class="academy-short-description">
+							<p>Tennis Academy 1 is a premier academy located in sunny Florida.</p>  
+							<ul>
+								<li>Youth and Adult Classes</li>
+								<li>Lunches and Snacks Included</li>
+								<li>Free Introductory Classes</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="academy-list-item">
+				<div class="row">
+					<div class="col-md-4 pull-right">
+						<div class="academy-sidebar text-right">
+							<div class="academy-featured">
+								<span class="glyphicon glyphicon-tag"></span>
+								Featured
+							</div>
+							<div class="academy-check text-success">
+								<span class="glyphicon glyphicon-check"></span>
+								Private Lessons Available
+							</div>
+							<div class="academy-actions">
+								<a class="btn btn-lg btn-primary" href="@Url.Action("Detail", "Home")">Show Me More</a>
+							</div>
+						</div>
+
+					</div>
+					<div class="col-md-1">
+						<img class="academy-logo" src="~/Content/Images/tennis-logo-2.png" />
+					</div>
+					<div class="col-md-7">
+						<h3 class="academy-title">Tennis Academy 2</h3>
+						<div class="academy-short-description">
+							<p>Tennis Academy 2 is anaother premier academy located in sunny Florida.</p>  
+							<ul>
+								<li>Lunches and Snacks Included</li>
+								<li>Discounts Available</li>
+								<li>Free Introductory Classes</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="academy-list-item">
+				<div class="row">
+					<div class="col-md-4 pull-right">
+						<div class="academy-sidebar text-right">
+							<div class="academy-actions">
+								<a class="btn btn-lg btn-primary" href="@Url.Action("Detail", "Home")">Show Me More</a>
+							</div>
+						</div>
+
+					</div>
+					<div class="col-md-1">
+						<img class="academy-logo" src="~/Content/Images/tennis-logo-3.png" />
+					</div>
+					<div class="col-md-7">
+						<h3 class="academy-title">Tennis Academy 3</h3>
+						<div class="academy-short-description">
+							<p>Tennis Academy 3 is a regular academy also located in sunny Florida.</p>  
+							<ul>
+								<li>Youth and Adult Classes</li>
+								<li>Certified Instructors</li>
+								<li>Lunches and Snacks Included</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
