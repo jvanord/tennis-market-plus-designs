@@ -62,6 +62,7 @@ namespace tennis_market_plus_designs
 				case "alt":
 					Utils.ThemeCode = "2"; break;
 				case "basic":
+				case "light":
 				case "":
 					Utils.ThemeCode = string.Empty; break;
 				default: break;
