@@ -30,11 +30,12 @@ namespace tennis_market_plus_designs
 			return MvcHtmlString.Create(stringToWrite);
 		}
 
-		public static IHtmlString If(this HtmlHelper html, bool condition, string stringToWrite, bool raw = false)
+		public static IHtmlString If(this HtmlHelper html, bool condition, string stringToWrite, string stringToWriteIfFalse = null, bool raw = false)
 		{
-			if (!condition) return MvcHtmlString.Empty;
-			if (raw) return html.Raw(stringToWrite);
-			return MvcHtmlString.Create(stringToWrite);
+			var text = condition ? stringToWrite : stringToWriteIfFalse;
+			if (string.IsNullOrEmpty(text)) return MvcHtmlString.Empty;
+			if (raw) return html.Raw(text);
+			return MvcHtmlString.Create(text);
 		}
 
 		public static IHtmlString IfHomePage(this HtmlHelper html, string stringToWrite, bool raw = false)
@@ -56,9 +57,14 @@ namespace tennis_market_plus_designs
 			base.OnActionExecuting(filterContext);
 			switch (filterContext.HttpContext.Request.QueryString["theme"])
 			{
-				case "alt": Utils.ThemeCode = "1"; break;
-				case "bold": Utils.ThemeCode = "2"; break;
-				default: Utils.ThemeCode = string.Empty; break;
+				case "bold":
+					Utils.ThemeCode = "1"; break;
+				case "alt":
+					Utils.ThemeCode = "2"; break;
+				case "basic":
+				case "":
+					Utils.ThemeCode = string.Empty; break;
+				default: break;
 			}
 		}
 	}

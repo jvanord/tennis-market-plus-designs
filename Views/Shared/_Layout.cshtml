@@ -20,10 +20,10 @@
 		<div class="row">
 			<div id="sidebar" class="col-md-3">
 				@RenderSection("sidebar", required: true)
-				<div id="alerts-noform" class="alert alert-warning fadealert" role="alert">Search and filter are not yet available.</div>
 			</div>
+			<div id="alerts-noform" class="alert alert-warning fadealert" role="alert">Search and filter are not yet available.</div>
 			<div id="content-container" class="col-md-9">
-				<div id="subnav" class="navbar navbar-inverse">
+				<div id="subnav" class="navbar navbar-@Html.If(Utils.ThemeCode == "1", "default", "inverse")">
 					<ul class="nav navbar-nav">
 						<li class="@Html.If(activeMenu == "Home", "active")"><a href="/">Home</a></li>
 						<li class="@Html.If(activeMenu == "Academies", "active")"><a href="/Academies">Academies</a></li>
@@ -46,7 +46,6 @@
 		$(function () {
 			$('form').submit(function (e) {
 				e.preventDefault();
-				debugger;
 				showAlert('#alerts-noform');
 			});
 		});

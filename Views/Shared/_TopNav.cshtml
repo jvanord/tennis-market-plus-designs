@@ -1,4 +1,4 @@
-﻿<div id="topnav" class="navbar navbar-default navbar-fixed-top">
+﻿<div id="topnav" class="navbar navbar-@Html.If(Utils.ThemeCode == "1", "inverse", "default") navbar-fixed-top">
 	<div class="navbar-header">
 		<h1 class="navbar-brand">
 			<a id="topnav-homelink" href="@Url.Action("Index", "Home")">
@@ -15,9 +15,9 @@
 				<span class="caret"></span>
 			</a>
 			<ul class="dropdown-menu">
-				<li><a href="?theme=basic">Basic</a></li>
-				<li><a href="?theme=alt">Alternate</a></li>
-				<li><a href="?theme=bold">Bold</a></li>
+				<li class="@Html.If(string.IsNullOrEmpty(Utils.ThemeCode), "active")"><a href="?theme=basic">Basic</a></li>
+				<li class="@Html.If(Utils.ThemeCode == "1", "active")"><a href="?theme=bold">Bold</a></li>
+				<li class="@Html.If(Utils.ThemeCode == "2", "active")"><a href="?theme=alt">Alternate</a></li>
 			</ul>
 		</li>
 	</ul>
